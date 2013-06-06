@@ -8,12 +8,19 @@ namespace ElsassSeeraiwer\RestBundle\Controller;
 use FOS\RestBundle\Controller\FOSRestController;
 //use FOS\RestBundle\Controller\Annotations as Rest;
 use ElsassSeeraiwer\ESDemoBundle\Entity\User;
+use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 
 class UsersController extends FOSRestController
 {
     public function optionsUsersAction()
     {} // "options_users" [OPTIONS] /users
 
+    /**
+     * @ApiDoc(
+     *  resource=true,
+     *  description="Renvois la liste des utilisateurs"
+     * )
+     */
     public function getUsersAction()
     {
         $em = $this->getDoctrine()->getManager();
@@ -35,6 +42,12 @@ class UsersController extends FOSRestController
     public function patchUsersAction()
     {} // "patch_users"   [PATCH] /users
 
+    /**
+     * @ApiDoc(
+     *  resource=true,
+     *  description="Renvois l'utilisateur par son id"
+     * )
+     */
     public function getUserAction($id)
     {
         $em = $this->getDoctrine()->getManager();

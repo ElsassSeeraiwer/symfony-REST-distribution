@@ -3,6 +3,10 @@ elsass_seeraiwer_rest:
     resource: "@ElsassSeeraiwerRestBundle/Resources/config/routing.yml"
     prefix:   /api
 
+NelmioApiDocBundle:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix:   /api/doc
+
 elsass_seeraiwer_es_demo:
     resource: "@ElsassSeeraiwerESDemoBundle/Controller/"
     type:     annotation

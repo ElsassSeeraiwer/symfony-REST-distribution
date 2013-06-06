@@ -75,6 +75,8 @@ fos_rest:
     routing_loader:
         default_format: json
 
+nelmio_api_doc: ~
+
 elsass_seeraiwer_es_bar:
     toolbar: false
     locale_tool: true

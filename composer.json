@@ -25,7 +25,8 @@
         "elsass-seeraiwer/user-bundle": "dev-master",
         "elsass-seeraiwer/bar-bundle": "dev-master",
         "jms/serializer-bundle": "dev-master",
-        "friendsofsymfony/rest-bundle": "dev-master"
+        "friendsofsymfony/rest-bundle": "dev-master",
+        "nelmio/api-doc-bundle": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [

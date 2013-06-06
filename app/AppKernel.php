@@ -24,6 +24,7 @@ class AppKernel extends Kernel
             new ElsassSeeraiwer\ESBarBundle\ElsassSeeraiwerESBarBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
             new FOS\RestBundle\FOSRestBundle(),
+            new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
             
             new ElsassSeeraiwer\ESDemoBundle\ElsassSeeraiwerESDemoBundle(),
             new ElsassSeeraiwer\RestBundle\ElsassSeeraiwerRestBundle(),
