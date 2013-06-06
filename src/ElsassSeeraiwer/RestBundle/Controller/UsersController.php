@@ -18,7 +18,7 @@ class UsersController extends FOSRestController
     /**
      * @ApiDoc(
      *  resource=true,
-     *  description="Renvois la liste des utilisateurs"
+     *  description="Renvoie la liste des utilisateurs"
      * )
      */
     public function getUsersAction()
@@ -45,7 +45,7 @@ class UsersController extends FOSRestController
     /**
      * @ApiDoc(
      *  resource=true,
-     *  description="Renvois l'utilisateur par son id"
+     *  description="Renvoie l'utilisateur par son id"
      * )
      */
     public function getUserAction($id)
