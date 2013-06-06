@@ -1,3 +1,8 @@
+elsass_seeraiwer_rest:
+    type: rest
+    resource: "@ElsassSeeraiwerRestBundle/Resources/config/routing.yml"
+    prefix:   /api
+
 elsass_seeraiwer_es_demo:
     resource: "@ElsassSeeraiwerESDemoBundle/Controller/"
     type:     annotation

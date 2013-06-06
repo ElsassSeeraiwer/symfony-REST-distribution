@@ -71,8 +71,12 @@ fos_user:
     firewall_name: main
     user_class: ElsassSeeraiwer\ESDemoBundle\Entity\User
 
+fos_rest:
+    routing_loader:
+        default_format: json
+
 elsass_seeraiwer_es_bar:
-    toolbar: true
+    toolbar: false
     locale_tool: true
     registration: true
 #    templates:

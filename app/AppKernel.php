@@ -19,10 +19,14 @@ class AppKernel extends Kernel
             new JMS\AopBundle\JMSAopBundle(),
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
-            new ElsassSeeraiwer\ESDemoBundle\ElsassSeeraiwerESDemoBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new ElsassSeeraiwer\ESUserBundle\ElsassSeeraiwerESUserBundle(),
             new ElsassSeeraiwer\ESBarBundle\ElsassSeeraiwerESBarBundle(),
+            new JMS\SerializerBundle\JMSSerializerBundle(),
+            new FOS\RestBundle\FOSRestBundle(),
+            
+            new ElsassSeeraiwer\ESDemoBundle\ElsassSeeraiwerESDemoBundle(),
+            new ElsassSeeraiwer\RestBundle\ElsassSeeraiwerRestBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
