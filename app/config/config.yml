@@ -75,6 +75,13 @@ fos_rest:
     routing_loader:
         default_format: json
 
+jms_serializer:
+    metadata:
+        directories:
+            FOSUB:
+                namespace_prefix: FOS\UserBundle
+                path: "%kernel.root_dir%/serializer/FOSUB"
+
 nelmio_api_doc: ~
 
 elsass_seeraiwer_es_bar:
