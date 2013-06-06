@@ -44,14 +44,13 @@ class UsersController extends FOSRestController
 
     /**
      * @ApiDoc(
-     *  resource=true,
-     *  description="Renvoie l'utilisateur par son id"
+     *  description="Renvoie l'utilisateur par son nom d'utilisateur"
      * )
      */
-    public function getUserAction($id)
+    public function getUserAction($username)
     {
         $em = $this->getDoctrine()->getManager();
-        $data = $em->getRepository('ElsassSeeraiwerESDemoBundle:User')->find($id);
+        $data = $em->getRepository('ElsassSeeraiwerESDemoBundle:User')->findByUsername($username);
 
         $view = $this->view($data, 200)
             ->setTemplateVar('users')
