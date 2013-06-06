@@ -1,8 +1,8 @@
 {
-    "name": "elsass-seeraiwer/symfony-distribution",
+    "name": "elsass-seeraiwer/symfony-REST-distribution",
     "license": "MIT",
     "type": "project",
-    "description": "The Elsass Seeraiwer distribution \"Symfony Standard Edition\"",
+    "description": "The Elsass Seeraiwer REST distribution \"Symfony Standard Edition\"",
     "autoload": {
         "psr-0": { "": "src/" }
     },
