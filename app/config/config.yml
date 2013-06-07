@@ -71,9 +71,20 @@ fos_user:
     firewall_name: main
     user_class: ElsassSeeraiwer\ESDemoBundle\Entity\User
 
+sensio_framework_extra:
+    view:
+        annotations: false
+
 fos_rest:
+    allowed_methods_listener: true
+    param_fetcher_listener: true
+    body_listener: true
+    format_listener: true
+    view:
+        view_response_listener: 'force'
     routing_loader:
         default_format: json
+#        include_format: false
 
 jms_serializer:
     metadata:
