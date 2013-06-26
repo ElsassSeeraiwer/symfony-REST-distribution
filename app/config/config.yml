@@ -95,9 +95,49 @@ jms_serializer:
 
 nelmio_api_doc: ~
 
+jms_translation:
+    locales: [en, fr]
+    tinymce_mod: []
+    configs:
+        app:
+            dirs: ['@ElsassSeeraiwerESDemoBundle']
+            output_dir: %kernel.root_dir%/Resources/translations
+            ignored_domains: [routes]
+            excluded_names: [*TestCase.php, *Test.php, *.php]
+            excluded_dirs: [cache, data, logs]
+            default_output_format: xliff
+            keep: true
+            # extractors: [alias_of_the_extractor]
+
 elsass_seeraiwer_es_bar:
-    toolbar: false
+    toolbar: true
     locale_tool: true
     registration: true
-#    templates:
-#        - { name: "textExemple", controller: "TestExempleBundle:Default:render", parameters: {"test": 42} }
+    templates:
+        - { name: "home", next:false, template: "ElsassSeeraiwerESDemoBundle:ESBar:homeBar.html.twig" }
+        - { name: "translation", template: "JMSTranslationBundle:ESBar:translationBar.html.twig", parameters:{'authorized_role': 'ROLE_SUPER_ADMIN'} }
+        - { name: "article", template: "ElsassSeeraiwerESArticleBundle:ESBar:articleBar.html.twig", parameters:{'authorized_role': 'ROLE_SUPER_ADMIN'} }
+
+# elsass_seeraiwer_es_article:
+#     locales: ['en', 'fr']
+#     tinymce: 
+#         content_css: 
+#             # - 'http://localhost/WebITRF/web/bundles/rsitemplate/css/rsi.css'
+#             # - 'http://localhost/WebITRF/web/bundles/itrfwebsite/css/itrf.css'
+#         plugin: "hr link table save print anchor searchreplace fullscreen charmap visualblocks image media nonbreaking autolink advlist contextmenu"
+#         toolbar1: "save | undo redo | removeformat | styleselect | fullscreen print | cut copy paste | searchreplace | hr anchor link table charmap visualblocks nonbreaking"
+#         toolbar2: "bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist | outdent indent blockquote | subscript superscript"
+#         contextmenu: "bold italic underline strikethrough | link image inserttable | cell row column deletetable"
+#         tools: "inserttable"
+#         nonbreaking_force_tab: true
+#         save_enablewhendirty: true
+#         # Le symbole "|" sur la première ligne est très important !! Il permet de predre la suite pour une chaine et non du contenu YML et de préserver les saut de ligne.
+#         style_formats: |
+#             [
+#                 {title: 'Titre 1', block: 'h2'},
+#                 {title: 'Titre 2', block: 'h3'},
+#                 {title: 'Titre 3', block: 'h4'},
+#                 {title: 'Important', inline: 'span', styles: {color: '#ff0000'}},
+#                 {title: 'Paragraphe important', block: 'p', classes: 'important'},
+#                 {title: 'Paragraphe normal', block: 'p'}
+#             ]

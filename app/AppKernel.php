@@ -23,11 +23,12 @@ class AppKernel extends Kernel
             new ElsassSeeraiwer\ESUserBundle\ElsassSeeraiwerESUserBundle(),
             new ElsassSeeraiwer\ESBarBundle\ElsassSeeraiwerESBarBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
+            new JMS\TranslationBundle\JMSTranslationBundle(),
             new FOS\RestBundle\FOSRestBundle(),
-            new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
-            
+            new Nelmio\ApiDocBundle\NelmioApiDocBundle(),            
             new ElsassSeeraiwer\ESDemoBundle\ElsassSeeraiwerESDemoBundle(),
             new ElsassSeeraiwer\RestBundle\ElsassSeeraiwerRestBundle(),
+            new ElsassSeeraiwer\ESArticleBundle\ElsassSeeraiwerESArticleBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

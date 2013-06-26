@@ -7,6 +7,15 @@ NelmioApiDocBundle:
     resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
     prefix:   /api/doc
 
+elsass_seeraiwer_es_article:
+    resource: "@ElsassSeeraiwerESArticleBundle/Controller/"
+    type:     annotation
+    prefix:   /{_locale}
+    defaults:
+        _locale: en
+    requirements:
+        _locale: en|fr
+
 elsass_seeraiwer_es_demo:
     resource: "@ElsassSeeraiwerESDemoBundle/Controller/"
     type:     annotation
@@ -35,6 +44,15 @@ _welcome:
 #        _locale: en|fr
 
 # FOSUserBundle
+
+JMSTranslationBundle_ui:
+    resource: @JMSTranslationBundle/Controller/
+    type:     annotation
+    prefix:   /{_locale}/_trans
+    defaults:
+        _locale: en
+    requirements:
+        _locale: en|fr
 
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
